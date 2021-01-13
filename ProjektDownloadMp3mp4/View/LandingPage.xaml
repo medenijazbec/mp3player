@@ -62,8 +62,7 @@
                     <Label Text="YOUR PLAYLIST" TextColor="Black" Opacity="0.5" Margin="15,10"/>
                 </CollectionView.Header>
                 <CollectionView.ItemsLayout>
-                    <!-- todo: make sure this is correct, it's supposed to be a LinearItemsLayout -->
-                    <ListItemsLayout Orientation="Vertical" ItemSpacing="1"/>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="1"/>
                 </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>

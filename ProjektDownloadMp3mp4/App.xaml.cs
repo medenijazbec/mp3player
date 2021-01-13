@@ -17,7 +17,7 @@ namespace ProjektDownloadMp3mp4
         public App(string filePath)
         {
             InitializeComponent();
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LandingPage());
             FilePath = filePath;
         }
 
