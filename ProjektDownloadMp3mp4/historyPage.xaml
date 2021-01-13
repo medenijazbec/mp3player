@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:classess="clr-namespace:ProjektDownloadMp3mp4.Classess;assembly=ProjektDownloadMp3mp4"
+             mc:Ignorable="d"
+             x:Class="ProjektDownloadMp3mp4.HistoryPage">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="BlanchedAlmond">
+            <ListView x:Name="HistoryListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Link}" TextColor="#282828"
+                                  x:DataType="classess:HistoryEntry" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Margin="20, 20, 20, 20" Text="Back to main page" Clicked="GoBack"
+                    HeightRequest="55" WidthRequest="500" BackgroundColor="#282828" TextColor="BlanchedAlmond"
+                    HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

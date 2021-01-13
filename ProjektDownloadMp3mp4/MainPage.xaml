@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProjektDownloadMp3mp4.MainPage">
+
+    <StackLayout BackgroundColor="BlanchedAlmond">
+        <Entry x:Name="Link" Placeholder="Paste your desired YouTube link here" Margin="10, 200, 10, 10"
+               Completed="EntryCompleted" TextColor="#282828" HorizontalOptions="Center" />
+        <Grid Margin="10, 50, 10, 10" Padding="0" RowSpacing="2" ColumnSpacing="2" BackgroundColor="BlanchedAlmond"
+              HorizontalOptions="CenterAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Text="Download Mp3" Clicked="DownloadMp3"
+                    HeightRequest="55" BackgroundColor="#282828" TextColor="BlanchedAlmond" />
+            <Button Grid.Row="0" Grid.Column="1" Text="Download Mp4" Clicked="DownloadMp4"
+                    HeightRequest="55" BackgroundColor="#282828" TextColor="BlanchedAlmond" />
+            <Button Grid.Row="0" Grid.Column="2" Text="History" Clicked="ShowHistory" HeightRequest="55"
+                    WidthRequest="500" BackgroundColor="#282828" TextColor="BlanchedAlmond" HorizontalOptions="Center" />
+        </Grid>
+        <Label x:Name="CompletedLabel" Text="Completed" IsVisible="False" HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center" TextColor="#282828" />
+    </StackLayout>
+</ContentPage>
